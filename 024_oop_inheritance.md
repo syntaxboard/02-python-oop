@@ -55,8 +55,8 @@ cObj.parentFunction()
 ## Multiple Inheritance
 * Here we demonstrate Multiple Inheritance, Which is multiple parent classes 
   and one child class
-MARKDOWN """
-# MARKDOWN ```
+
+```
 #Create one more parent class, to demonstrate multiple parent inheritance
 class Parent_1():
     "This is another parent-level class"
