@@ -14,7 +14,7 @@ ContentName: print-class
 ## Create a Class
 * Here we create a Class to Add and Multiply TWO Numbers
 
-'''
+```
 class Test:
 
     def add1(self, num1, num2):
