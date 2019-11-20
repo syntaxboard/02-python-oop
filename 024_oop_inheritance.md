@@ -22,9 +22,8 @@ ContentName: oop-inheritance
 * Private variables,Note there is no Private functions / methods in PYTHON
 
 
-## 
+## Single Inheritance
 * Here we demonstrate One Parent and One Child,
-
 ```
 # Inheritance demo, with one parent class and one child class
 # Create a PARENT class, which will be inherited by a child class
@@ -55,7 +54,6 @@ cObj.parentFunction()
 ## Multiple Inheritance
 * Here we demonstrate Multiple Inheritance, Which is multiple parent classes 
   and one child class
-
 ```
 #Create one more parent class, to demonstrate multiple parent inheritance
 class Parent_1():
@@ -90,7 +88,6 @@ gcObj.Parent2Function()
 * Here we demonstrate Mult-Level Inheritance, Which is The Inheritance is 
   across multiple classes where in A Child Class Inherits from a Parent Class,
   and the Parent Class inherits from a Grand parent Class
-
 ```
 #Create one more parent class, to demonstrate multiple parent inheritance
 class GrandParent():
@@ -126,7 +123,6 @@ gcObj.ChildFunction()
   a parent class.
 * Here the Child Functions and variables, with same names takes precedence over
   the Inherited Parent Class Functions and Variables
-
 ```
 #Demonstration of OverRiding
 class xParent():  # Create a Parent Class
@@ -155,24 +151,58 @@ objA.func1()    # This should print message from the child class
   that have been overridden in the child class.
 * Here we use the `super` keyword, Pass the Child Class Name and call the 
   parent class's function
-
 ```
-class Parent1():    # Parent Class with a method
+# ###########################
+# Parent Class with a method
+# ###########################
+class Parent1():
     "A parent class to demonstrate the SUPER"
+    
+    # Parent1 Class Variable
+    X = 100
+    
+    # Parent1 Consructor
+    def __init__(self):
+        print("This is a message from ",Parent1.__name__)
+    
+    # Parent1 Method
     def func1(self):
         print("This is a message from Parent1.func1")
 
-class Child1(Parent1):    # Child Class with a method
+
+# ##########################
+# Child Class with a method
+# ##########################
+class Child1(Parent1):
     "A child class to demonstrate the SUPER"
+    
+    # Child1 Class Variable
+    X = 999
+    
+    # Child1 Consructor
+    def __init__(self):
+    
+        # Call the parent Classes Constructor using the super()
+        super().__init__()
+        
+        # Refer the variable X from Parent1 Class using super()
+        print(super().X)
+
+        # Refer the variable X from Child1 Class
+        print(self.X)
+        
+    
     def func1(self):
         print("This is a message from Child1.func1")
 
+        
     # This is a func2, calling the Parent1 classes method.
     def func2(self):
-        super(Child1,self).func1()
+        super().func1()
 
 
 # Create an objec to demonstrate SUPER()
+print(1240)
 supObject = Child1()
 supObject.func1()
 supObject.func2()
@@ -181,9 +211,8 @@ supObject.func2()
 
 ## Class Private Variables
 * Private Variables are variables that cannot be accessed outside the class.
-* Create Private variables using a double underscore prefix
+* Create Private variables using a double underscore ( _ ) prefix
   for the variable names.
-
 ```
 class private_test():
     "This is a class to demonstrate the Private variables"

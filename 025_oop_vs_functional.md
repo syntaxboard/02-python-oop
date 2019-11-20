@@ -11,9 +11,9 @@ ContentName: print-class
 * Here we demonstrate why Object Oriented Programming is more efficient than 
   Functional Programming for a same problem-solution
 
+
 ## Create a Class
 * Here we create a Class to Add and Multiply TWO Numbers
-
 ```
 class Test:
 
@@ -22,7 +22,6 @@ class Test:
 
     def mul1(self, num1, num2):
         return num1 * num2
-
 ```
 
 
@@ -40,7 +39,6 @@ print(Obj1.__sizeof__())
 ## Create a functional code the same as Class
 * Here we create a file with functional code, same as the Test Class to Add 
   and Multiply TWO Numbers.
-  
 ```
 num1 = None
 num2 = None
@@ -59,7 +57,6 @@ def mul1(self, num1, num2):
 * After assigning the values to the functional code caller, it proves that 
   the functionl code occupies more space, and proves that Object Oriented is 
   space efficient in similar business contexts.
-
 ```
 import func_test as f
 

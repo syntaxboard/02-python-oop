@@ -15,8 +15,6 @@ ContentName: class-builtin-attributes
 * `__name__`   prints the CLASS Name
 * `__module__` module name where the class is defined
 * `__bases__`  base class list in case of Inheritance
-
-
 ```
 # 1. Create a CLASS
 ###################

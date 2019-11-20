@@ -21,15 +21,15 @@ ContentName: class-builtin-functions
 * Once a constructor is created all the other functions
   MUST have the first parameter as "self"
 * "self": is a reference to the object instance
-
-
 ```
 class Tinitiate:
     'This is a brief note about the class, This is the TINITIATE Class'
     # a class Variable
     ti_var   = 100
 
+    
     def __init__(self, var1, var2):
+        # These are Instance variables
         self.var1 = var1
         self.var2 = var2
 
@@ -61,7 +61,6 @@ tObj = ManyValues('A','B','C')
 
 ## Python Built-in Function __iter__
 * __iter__, This returns a "loop of data"
-
 ```
 # Create a class with the __init__ method
 class IterTest():
@@ -87,7 +86,6 @@ for data in t_Obj:
   the **Destructor**.
 * Usually its used to close connections, close file handler and freeing any 
   shared data or resetting data
-
 ```
 from os import open
 
@@ -101,6 +99,7 @@ class DestructorDemo:
         print('DESTRUCTOR: Object of Class DestructorDemo Freed')
 
 x = DestructorDemo()
+
 ```
 
 
@@ -112,7 +111,6 @@ x = DestructorDemo()
   representations of an object, is supposed to be shorter and more user-friendly,
 * `__repr__` is a built-in function used to compute the "official" string 
   reputation of an object, It usually longer
-
 ```
 class ReprStrDemo:
 
